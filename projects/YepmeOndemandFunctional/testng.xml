@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<suite allow-return-values="false" configfailurepolicy="skip" data-provider-thread-count="10" group-by-instances="false" guice-stage="DEVELOPMENT" junit="false" name="Suite" parallel="none" preserve-order="true" skipfailedinvocationcounts="false" thread-count="5">
+  <test allow-return-values="false" group-by-instances="false" junit="false" name="testng" preserve-order="true" skipfailedinvocationcounts="false">
+    <classes>
+      <class name="com.merahkee.hybridapp.Yepme">
+      <methods>
+      <include name="login"/>
+</methods>
+      </class>
+    </classes>
+  </test> <!-- testng -->
+</suite><!-- Suite -->

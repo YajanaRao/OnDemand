@@ -1,0 +1,47 @@
+<<<<<<< .mine
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER"/>
+	<classpathentry kind="src" path="src/main/java"/>
+	<classpathentry kind="lib" path="target/jmeter/bin/ApacheJMeter-3.1.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/accessors-smart-1.1.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/asm-5.1.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/avalon-framework-4.1.4.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/bcmail-jdk15on-1.49.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/bcpkix-jdk15on-1.49.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/bcprov-jdk15on-1.49.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/bsf-2.4.0.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/bsh-2.0b5.jar"/>
+	<classpathentry kind="lib" path="target/jmeter/lib/commons-codec-1.10.jar"/>
+	<classpathentry kind="lib" path="target/JMeterProject-0.0.1-SNAPSHOT.jar"/>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
+||||||| .r0
+=======
+<?xml version="1.0" encoding="UTF-8"?>
+<classpath>
+	<classpathentry kind="src" output="target/classes" path="src/main/java">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="src" output="target/test-classes" path="src/test/Jmeter">
+		<attributes>
+			<attribute name="optional" value="true"/>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.jdt.launching.JRE_CONTAINER/org.eclipse.jdt.internal.debug.ui.launcher.StandardVMType/J2SE-1.5">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="con" path="org.eclipse.m2e.MAVEN2_CLASSPATH_CONTAINER">
+		<attributes>
+			<attribute name="maven.pomderived" value="true"/>
+		</attributes>
+	</classpathentry>
+	<classpathentry kind="output" path="target/classes"/>
+</classpath>
+>>>>>>> .r52

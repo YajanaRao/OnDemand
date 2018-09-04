@@ -1,0 +1,4 @@
+Narrative:
+In order to check Pebble application functionality
+As an Tester
+I want to look up for all passed tests

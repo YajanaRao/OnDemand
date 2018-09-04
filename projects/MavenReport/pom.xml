@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+  <modelVersion>4.0.0</modelVersion>
+
+
+  <groupId>com.merahkee.JMeter</groupId>
+  <artifactId>JMeterProject</artifactId>
+  <version>0.0.1-SNAPSHOT</version>
+  <packaging>jar</packaging>
+
+  <name>JMeterProject</name>
+  <url>http://maven.apache.org</url>
+
+ <dependencies>
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
+    <dependency>
+      <groupId>com.github.softinica.maven</groupId>
+      <artifactId>jmeter-report-maven-plugin</artifactId>
+      <version>1.0.0</version>
+    </dependency>
+  </dependencies>
+  <build>
+     <plugins>
+        <plugin>
+            <groupId>com.lazerycode.jmeter</groupId>
+            <artifactId>jmeter-maven-plugin</artifactId>
+            <version>2.1.0</version>
+            <executions>
+                <execution>
+                    <id>jmeter-tests</id>
+                    <goals>
+                        <goal>jmeter</goal>
+                    </goals>
+                </execution>
+            </executions>
+			<configuration>
+              <testFilesIncluded>
+<jMeterTestFile>PP-6.jmx</jMeterTestFile>
+</testFilesIncluded>
+            </configuration>
+			</plugin>
+			<plugin>
+		<groupId>de.codecentric</groupId>
+		<artifactId>jmeter-graph-maven-plugin</artifactId>
+		<version>0.1.0</version>
+		<configuration>
+	<inputFile>${project.build.directory}/jmeter/results/20171023-PP-6.jtl</inputFile>	
+		  <graphs>
+		    <graph>
+		      <pluginType>ResponseTimesOverTime</pluginType>
+		      <width>800</width>
+		      <height>600</height>
+		      <outputFile>${project.build.directory}/jmeter/results/BlazeDemo Request.png</outputFile>
+		    </graph>
+		  </graphs>
+		</configuration>
+	</plugin>
+    </plugins>
+  </build>
+</project>
