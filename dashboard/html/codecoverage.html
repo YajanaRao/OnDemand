@@ -1,0 +1,74 @@
+<html>
+<head>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+</head>
+<body>
+ <div style="width:800px"><canvas id="bubble-chart" width="1000" height="450"></canvas></canvas><div>
+  <script>
+new Chart(document.getElementById("bubble-chart"), {
+    type: 'bubble',
+    data: {
+      labels: "Africa",
+      datasets: [
+        {
+          label: ["build 1"],
+          backgroundColor: "rgba(255,221,50,0.2)",
+          borderColor: "rgba(255,221,50,1)",
+          data: [{
+            x: 21269017,
+            y: 5.245,
+            r: 15
+          }]
+        }, {
+          label: ["build 2"],
+          backgroundColor: "rgba(60,186,159,0.2)",
+          borderColor: "rgba(60,186,159,1)",
+          data: [{
+            x: 258702,
+            y: 7.526,
+            r: 10
+          }]
+        }, {
+          label: ["build 3"],
+          backgroundColor: "rgba(0,0,0,0.2)",
+          borderColor: "#000",
+          data: [{
+            x: 3979083,
+            y: 6.994,
+            r: 30
+          }]
+        }, {
+          label: ["build 4"],
+          backgroundColor: "rgba(193,46,12,0.2)",
+          borderColor: "rgba(193,46,12,1)",
+          data: [{
+            x: 4931877,
+            y: 5.921,
+            r: 50
+          }]
+        }
+      ]
+    },
+    options: {
+      title: {
+        display: true,
+        text: 'Build result of the application'
+      }, scales: {
+        yAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: "Happiness"
+          }
+        }],
+        xAxes: [{
+          scaleLabel: {
+            display: true,
+            labelString: "GDP (PPP)"
+          }
+        }]
+      }
+    }
+});
+</script>
+</body>
+</html>

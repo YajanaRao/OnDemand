@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>webapp</title>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../images/images.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+<script>
+function validation(){
+var password=document.forms["loginForm"]["password"].value;
+var conform_password=document.forms["loginForm"]["conform password"].value;
+
+
+if(password !== conform_password){
+alert("passwords does not match");
+return false;
+}
+}
+</script>
+</head>
+<body style="background-color: #f6f7f7">
+  <div class="w3-top">
+    <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
+      <a href="webapp.html" class="w3-bar-item w3-button"><h1>Merahkee</h1></a>
+      <!-- Float links to the right. Hide them on small screens -->
+      <div class="w3-right w3-hide-small">
+        <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+        <a href="#about" class="w3-bar-item w3-button">About</a>
+        <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+      </div>
+    </div>
+  </div>
+  <br></br>
+  <br></br>
+  <br></br>
+  <br></br>
+<h1>Create new account</h1>
+<div class="w3-container">
+<form name="loginForm" onsubmit="return validation()" method="post" action="../register.php">
+First name:<br>
+<input type="text" name="firstname" placeholder="Firstname" class="w3-input" style="width:30%" required>
+<br>
+Last name:<br>
+<input type="text" name="lastname" class="w3-input" placeholder="Lastname" style="width:30%">
+<br>
+Email Id:<br>
+<input type="text" name="email" class="w3-input" placeholder="Email Id or Phone Number" style="width:30%" required>
+<br>
+<label>Password:</label><br>
+<input type="password" name="password" class="w3-input" style="width:30%" required>
+<br>
+Conform password:<br>
+<input type="password" name="conform password" class="w3-input" style="width:30%" required>
+<br>
+<button type="submit" onclick="validation()">Submit</button>
+</form>
+<.
+</body>
+</html>

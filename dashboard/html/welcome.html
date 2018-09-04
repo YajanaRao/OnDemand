@@ -1,0 +1,176 @@
+<html>
+<head>
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../images/images.ico">
+<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.0/jquery.min.js" type="text/javascript"></script>
+<title>webapp | Welcome Page</title>
+<link rel = "stylesheet" type = "text/css" href = "css/style.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.5.0/Chart.min.js"></script>
+<script>
+   $(function(){
+       $('#filename').load("demo.html");
+   });
+   $(function(){
+       $('#bubble').load("codecoverage.html");
+   });
+    </script>
+</head>
+
+<body>
+
+<!-- Navbar (sit on top) -->
+<div class="w3-top">
+  <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
+    <a href="webapp.html" class="w3-bar-item w3-button"><h1>Merahkee</h1></a>
+    <!-- Float links to the right. Hide them on small screens -->
+    <div class="w3-right w3-hide-small">
+      <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+      <a href="#about" class="w3-bar-item w3-button">About</a>
+      <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+    </div>
+  </div>
+</div>
+
+
+<h1>Welcome</h1>
+
+
+
+<!-- The Band Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64" style="max-width:800px" id="band">
+    <h2 class="w3-wide">INTENTION</h2>
+    <p class="w3-opacity"><i>We offer to you to get dirty your hands on codes</i></p>
+    <p class="w3-justify">We have created a fictional website. That offers you to experiment the created test scripts and get the results  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip
+      ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum consectetur
+      adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+  </div>
+
+  <!-- Menu Container -->
+  <div class="w3-container" id="menu">
+    <div class="w3-content" style="max-width:900px">
+
+      <h5 class="w3-center w3-padding-48"><span class="w3-tag w3-wide">REPORTS</span></h5>
+
+      <div class="w3-row w3-center w3-card-2 w3-padding" style="width:900">
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Eat');" id="myLink">
+          <div class="w3-col s6 tablink">BUILD HEALTH</div>
+        </a>
+        <a href="javascript:void(0)" onclick="openMenu(event, 'Drinks');">
+          <div class="w3-col s6 tablink">CODE CODECOVERAGE</div>
+        </a>
+      </div>
+
+      <div id="Eat" class="w3-container menu w3-padding-48 w3-card-2" style="width:900">
+        <div id="filename" class="right"></div>
+      </div>
+
+      <div id="Drinks" class="w3-container menu w3-padding-48 w3-card-2" style="width:900">
+        <div id="bubble" class="left"></div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <div class="w3-container" id="projects">
+      <h5 class="w3-center w3-padding-64"><span class="w3-tag w3-wide">BATTLE FIELD</span></h5>
+<div class="center">
+<ul style="list-style-type:none" class="w3-ul w3-hoverable w3-white">
+  <div class="w3-container">
+  <li class="w3-padding-16">
+    <img src="../images/logo-small.png" alt="Image" class="w3-left w3-margin-right" style="width:50px">
+    <span class="w3-large"><h2>Black Lotus</h2></span>
+    <br>
+    <span>A meditation App</span>
+  </li>
+  <div id="nav" class="w3-container">
+  <li class="w3-padding-16"><h3><a href="../feature.php" onclick="myFunction()">Functional Testing</a></h3></li>
+  <div id="content">
+  </div></div>
+<div id="nav1" class="w3-container">
+  <form name="myform" method="POST" action="../testcase.php">
+  <li class="w3-padding-16"><h3><a onclick="myFunction1()">Performance Testing</a></h3></li>
+    <div id="content1" style="display:block">
+    <p><input name="performance" type="submit" value ="Feature 1"></p>
+   <p><input value="Feature 2"></p>
+  </div></div>
+ <div class="w3-container">
+  <li class="w3-padding-16"><h3><a onclick="myFunction2()">Mobile application Testing</a></h3></li>
+  <div id="content2">
+    <p><input type="submit" value="Appium" id="appium" name="appium" style="border:none;background-color: White"></p>
+    <p><a value="Feature 2" href="../browserstack.php" name="browserstack">Browserstack</a></p></div>
+  </div>
+</form>
+</ul>
+</div>
+</div>
+<script>
+$(function(){
+    $("#content1").hide();
+    $("#nav1").on("click", function(){
+        $("#div1").toggle();
+    });
+});
+$(function(){
+    $("#content2").hide();
+    $("#nav2").on("click", function(){
+        $("#content2").toggle();
+    });
+});
+
+ $(document).ready(function() {
+  $('#nav a').click(function(e) {
+   e.preventDefault();
+   $('#content').load($(this).attr('href'));
+  });
+ });
+
+ function myFunction() {
+    var x = document.getElementById("content");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+
+ function myFunction1() {
+    var x = document.getElementById("content1");
+    if (x.style.display === "none") {
+        x.style.display = "block";
+    } else {
+        x.style.display = "none";
+    }
+}
+function myFunction2() {
+   var x = document.getElementById("content2");
+   if (x.style.display === "none") {
+       x.style.display = "block";
+   } else {
+       x.style.display = "none";
+   }
+}
+function openMenu(evt, menuName) {
+  var i, x, tablinks;
+  x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";
+  }
+  tablinks = document.getElementsByClassName("tablink");
+  for (i = 0; i < x.length; i++) {
+     tablinks[i].className = tablinks[i].className.replace(" w3-dark-grey", "");
+  }
+  document.getElementById(menuName).style.display = "block";
+  evt.currentTarget.firstElementChild.className += " w3-dark-grey";
+}
+document.getElementById("myLink").click();
+</script>
+<!-- Footer -->
+<br></br>
+<footer class="w3-center w3-black w3-padding-16">
+  <p>Created by <a href="https://www.w3schools.com/w3css/default.asp" title="W3.CSS" target="_blank" class="w3-hover-text-green">Yajana.N.Rao</a></p>
+</footer>
+</body>
+</html>

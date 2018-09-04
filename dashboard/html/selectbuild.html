@@ -1,0 +1,25 @@
+<html>
+<head>
+  <link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+</head>
+<body>
+  <div id="nav">
+<form action="../OnDemand.php" method="POST">
+<input type="checkbox" name="check_list[]" value="PP-1"><label>PP-1</label><br/>
+<input type="checkbox" name="check_list[]" value="PP-2"><label>PP-2</label><br/>
+<input type="checkbox" name="check_list[]" value="PP-3"><label>PP-3</label><br/>
+<button type="submit" name="submit" value="Submit">Submit</button>
+<div id="content">
+</div>
+<script>
+ $(document).ready(function() {
+  $('#nav a').click(function(e) {
+   e.preventDefault();
+   $('#content').load($(this).attr('href'));
+  });
+ });
+ </script>
+</form>
+</div>
+</body>
+</html>

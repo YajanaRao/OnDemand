@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+<title>webapp | Login Page</title>
+<link rel = "stylesheet" type = "text/css" href = "css/style.css" />
+<meta charset="UTF-8">
+<link rel="shortcut icon" href="../images/images.ico">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+<script>
+function validation(){
+var username=document.forms["loginForm"]["firstname"].value;
+var password=document.forms["loginForm"]["password"].value;
+var email=document.forms["loginForm"]["email"].value;
+
+if(username==""||password==""||email==""){
+alert("Required fields must be filled");
+return false;
+}
+}
+</script>
+</head>
+  <body style="background-color: #f6f7f7">
+    <div class="w3-top">
+      <div class="w3-bar w3-white w3-wide w3-padding w3-card-2">
+        <a href="webapp.html" class="w3-bar-item w3-button"><h1>Merahkee</h1></a>
+        <!-- Float links to the right. Hide them on small screens -->
+        <div class="w3-right w3-hide-small">
+          <a href="#projects" class="w3-bar-item w3-button">Projects</a>
+          <a href="#about" class="w3-bar-item w3-button">About</a>
+          <a href="#contact" class="w3-bar-item w3-button">Contact</a>
+        </div>
+      </div>
+    </div>
+    <br></br>
+    <br></br>
+    <br></br>
+    <br></br>
+<h1>Login</h1>
+<div class="w3-container">
+<form name="loginForm" onsubmit="return validation()" method="post" action="../login.php">
+User name:<br>
+<input type="text"  class="w3-input"  name="username" placeholder="Username" style="width:30%" required>
+<br>
+<label>Password:</label><br>
+<input type="password"  class="w3-input" name="password" placeholder="password" style="width:30%" required>
+<br></br>
+<button type="submit" onclick="validation()">Submit</button>
+<br>
+<input type="checkbox" checked="checked" value="Remember me"><span> Remember me</span>
+</form>
+</div>
+</body>
+</html>
